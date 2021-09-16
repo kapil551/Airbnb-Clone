@@ -1,5 +1,8 @@
 import Head from 'next/head'
 
+// import the Header component
+import Header from '../components/Header';
+
 export default function Home() {
   return (
     <div className="">
@@ -8,12 +11,12 @@ export default function Home() {
         <title>Airbnb-clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <h1>Let's Build Airbnb</h1>
-
+      
       {/* App Structure */}
 
-      {/* Header */}
+      {/* Header ==> Use the Header component */}
+      <Header />
+      
       {/* Banner */}
       {/* */}
 
