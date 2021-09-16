@@ -2,3 +2,6 @@
     
     npx create-next-app -e with-tailwindcss airbnb-clone
     https://tailwindcss.com/docs/guides/nextjs
+
+2. Learn about Tailwind CSS:
+    https://tailwindcss.com/
