@@ -27,6 +27,7 @@ Why a developer would use NextJS?
 How will NextJs improve your online business?
 
 Why use Tailwind CSS over "Normal CSS"?
+
     1. Making styling process much faster.
     2. Provides more convenience using built-in classes.
     3. It has a highly customizable config file.
