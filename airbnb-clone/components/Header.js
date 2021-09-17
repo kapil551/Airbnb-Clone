@@ -108,7 +108,9 @@ function Header() {
             </div>
 
             {/* Middle Section of the Header -> Search Bar */}
-            <div className="border-red-900 flex items-center border-2 rounded-full py-2">
+            {/* Adding Responsive behavior to the Search Input:
+                        I want the search input to have a border only when the width is >= 768px */}
+            <div className="border-white-900 flex items-center md:border-2 rounded-full py-2">
 
                 <input type="text" placeholder="Start your search.."/>
 
@@ -138,8 +140,22 @@ function Header() {
                     cursor: pointer;
                 
                 */}
-               
-                <SearchIcon className="h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer"/>
+
+                 {/* 
+                    Adding Responsive behavior to the Search bar:
+                        I want to make the searchIcon hidden by default and only show it when the width is >= 768px
+
+                    Step-1: Hide the search bar by default:
+                        hidden ==> display: none;
+
+                    Step-2: Add a Breakpoint:
+                        @media (min-width: 768px) {
+                            .md\:inline-flex {
+                                display: inline-flex;
+                            }
+                        }
+                */}
+                <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer"/>
 
 
             </div>
