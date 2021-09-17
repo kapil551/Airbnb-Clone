@@ -11,3 +11,11 @@
 
 4. Learning Tailwind CSS:
         https://tailwindcss.com/docs
+
+5. heroicons:
+        https://heroicons.com/
+
+6. Installing heroicons in react:
+    https://github.com/tailwindlabs/heroicons
+
+    npm install @heroicons/react
