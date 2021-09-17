@@ -109,10 +109,18 @@ function Header() {
 
             {/* Middle Section of the Header -> Search Bar */}
             {/* Adding Responsive behavior to the Search Input:
-                        I want the search input to have a border only when the width is >= 768px */}
-            <div className="border-white-900 flex items-center md:border-2 rounded-full py-2">
+                        I want the search input to have a border only when the width is >= 768px 
+                        md:border-2
 
-                <input type="text" placeholder="Start your search.."/>
+                        I want the middle section of header to have shadow only when the widrh is >=768px
+                        md:shadow-sm
+            */}
+            <div className="border-white-900 flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
+
+                <input className="pl-5 bg-transparent outline-none flex-grow text-sm text-gray-600 placeholder-gray-400" 
+                        type="text" 
+                        placeholder="Start your search.."
+                />
 
                 {/* use the SearchIcon from heroicons */}
                 {/* 
@@ -149,13 +157,24 @@ function Header() {
                         hidden ==> display: none;
 
                     Step-2: Add a Breakpoint:
+                        md:inline-flex ==>
+                            @media (min-width: 768px) {
+                                .md\:inline-flex {
+                                    display: inline-flex;
+                                }
+                            }
+                    
+                    
+                    md:mx-2 ==>
                         @media (min-width: 768px) {
-                            .md\:inline-flex {
-                                display: inline-flex;
+                            .md\:mx-2 {
+                                margin-left: 0.5rem;
+                                margin-right: 0.5rem;
                             }
                         }
+
                 */}
-                <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer"/>
+                <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2"/>
 
 
             </div>
