@@ -5,3 +5,9 @@
 
 2. Learn about Tailwind CSS:
     https://tailwindcss.com/
+
+3.  Handling Error: hostname "links.papareact.com" is not configured under images in your `next.config.js`
+        https://nextjs.org/docs/messages/next-image-unconfigured-host
+
+4. Learning Tailwind CSS:
+        https://tailwindcss.com/docs
