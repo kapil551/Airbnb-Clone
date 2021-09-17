@@ -3,6 +3,9 @@
 // import the next.js Image tag
 import Image from 'next/image';
 
+// import SearchIcon as a react component from heroicons
+import { SearchIcon } from '@heroicons/react/solid';
+
 // react functional export component
 
 function Header() {
@@ -104,8 +107,40 @@ function Header() {
 
             </div>
 
-            {/* Middle Section of the Header */}
-            <div>
+            {/* Middle Section of the Header -> Search Bar */}
+            <div className="border-red-900 flex items-center border-2 rounded-full py-2">
+
+                <input type="text" placeholder="Start your search.."/>
+
+                {/* use the SearchIcon from heroicons */}
+                {/* 
+                    Tailwind CSS:
+
+                    class ==> Properties
+
+                    h-8 ==> height: 2rem;
+
+                    bg-red-400 ==> 
+                    --tw-bg-opacity: 1;
+                    background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+
+                    text-white ==> 
+                    --tw-text-opacity: 1;
+                    color: rgba(255, 255, 255, var(--tw-text-opacity));
+
+                    rounded-full ==> 
+                    border-radius: 9999px;
+
+                    p-2 ==>
+                    padding: 0.5rem;
+
+                    cursor-pointer ==>
+                    cursor: pointer;
+                
+                */}
+               
+                <SearchIcon className="h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer"/>
+
 
             </div>
 
