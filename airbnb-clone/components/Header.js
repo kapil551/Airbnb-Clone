@@ -208,7 +208,23 @@ function Header() {
             */}
             <div className="flex items-center justify-end space-x-4 text-gray-500">
 
-                    <p>Become a host</p>
+                    {/* 
+                        Adding Responsive behavior to the paragraph:
+                                I want to make the paragraph hidden by default and only show it when the width is >= 768px
+
+                        Step-1: Hide the paragraph by default:
+                                hidden ==> display: none;
+
+                        Step-2: Add a Breakpoint:
+                                md:inline ==>
+                                @media (min-width: 768px) {
+                                        .md\:inline {
+                                        display: inline;
+                                        }
+                                }
+                        
+                    */}
+                    <p className="hidden md:inline cursor-pointer" >Become a host</p>
 
                     {/* Use the GlobalAltIcon from heroicons */}
                     {/* 
