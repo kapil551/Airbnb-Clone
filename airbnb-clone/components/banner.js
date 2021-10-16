@@ -82,7 +82,12 @@ function Banner() {
             */}
             <div className=" border-2 absolute top-1/2 w-full text-center">
                 
-                <p> Not sure where to go? Perfect. </p>
+                {/* 
+                    Adding responsive behaviour to the text of the paragraph:
+                        I want to change the font size for different widths of the window. 
+
+                */}
+                <p className="text-sm sm:text-lg"> Not sure where to go? Perfect. </p>
 
             </div>
            
