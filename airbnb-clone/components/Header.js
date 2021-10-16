@@ -3,8 +3,14 @@
 // import the next.js Image tag
 import Image from 'next/image';
 
-// import SearchIcon as a react component from heroicons
-import { SearchIcon } from '@heroicons/react/solid';
+// import SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon, UsersIcon as a react component from heroicons
+import { 
+        SearchIcon,
+        GlobeAltIcon,
+        MenuIcon,
+        UserCircleIcon,
+        UsersIcon
+} from '@heroicons/react/solid';
 
 // react functional export component
 
@@ -180,8 +186,47 @@ function Header() {
             </div>
 
             {/* Right section of the Header */}
-            <div>
+            {/* 
+                Tailwind CSS:
 
+                class ==> properties
+
+                flex ==>  display: flex;
+
+                space-x-4 ==> x diection mein sare chidlrens ke beech mein 4 ka space de do.
+
+                items-center ==> align-items: center;
+
+                justify-end ==> justify-content: flex-end;
+
+                text-gray-500 ==> 
+                {
+                        --tw-text-opacity: 1;
+                        color: rgba(107, 114, 128, var(--tw-text-opacity));
+                }
+
+            */}
+            <div className="flex items-center justify-end space-x-4 text-gray-500">
+
+                    <p>Become a host</p>
+
+                    {/* Use the GlobalAltIcon from heroicons */}
+                    {/* 
+                        Tailwind CSS:
+
+                        class ==> properties
+
+                        h-6 ==> height: 1.5rem;
+
+                    */}
+                    <GlobeAltIcon className="h-6" />
+
+                    <div className="flex items-center space-x-2 border-2 p-2 rounded-full">
+
+                        <MenuIcon className="h-6" />
+                        <UserCircleIcon className="h-6"/> 
+
+                    </div>
             </div>
 
         </header>
