@@ -61,6 +61,34 @@ function Banner() {
                 objectFit="cover"
             />
 
+            {/* 
+                Adding some text over the image:
+                    ==> to add some text over the image we need to position it absolutely. 
+                        position: absolut; ==> the element comes out of the flow of the document.
+            */}
+            {/* 
+                Tailwind CSS:
+                
+                class ==> properties
+                
+                absolute ==> position: absolute;
+
+                top-1\/2 ==> top: 50%;
+
+                w-full ==> width: 100%;
+
+                text-center ==> text-align: center;
+
+            */}
+            <div className=" border-2 absolute top-1/2 w-full text-center">
+                
+                <p> Not sure where to go? Perfect. </p>
+
+            </div>
+           
+
+
+
         </div>
     )
 }
