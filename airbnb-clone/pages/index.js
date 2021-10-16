@@ -3,6 +3,9 @@ import Head from 'next/head'
 // import the Header component
 import Header from '../components/Header';
 
+// import the Banner compoent
+import Banner from '../components/banner';
+
 export default function Home() {
   return (
     <div className="">
@@ -18,6 +21,7 @@ export default function Home() {
       <Header />
       
       {/* Banner */}
+      < Banner />
       {/* */}
 
     </div>
