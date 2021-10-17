@@ -110,12 +110,31 @@ function Main({ fetchedData, fetchedDataForMediumCard }) {
                 <h2 className="text-4xl font-semibold py-8"> Live Anywhere </h2>
 
                 {/* Acess the fetchedDataForMediumCard */}
+                {/* 
+                    added a scrollable cursor styling to the middle section of the main component:
+
+                        1. flex ==> display: flex;
+                        2. space out each medium card in the x direction.
+                        3. handle the overflow by adding a scroll ==> overflow-scroll
+
+                        4. Now I want to hide the overflow scroll bar:
+                                Google Search: tailwind scrollbar hide
+                                 https://www.npmjs.com/package/tailwind-scrollbar-hide
+                                 npm install tailwind-scrollbar-hide
+            
+
+
+
+                */}
+                <div className="border-2 border-pink-700 flex space-x-3 overflow-scroll 
+                        scrollbar-hide p-3 -ml-3">
                 {
                     fetchedDataForMediumCard?.map((item) => {
 
                         return <MediumCard key={item.img} img={item.img} title={item.title} />
                     })
                 }
+                </div>
 
             </section>
 

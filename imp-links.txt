@@ -23,3 +23,8 @@
 7. Pull some information from the server:
         - Server Side Rendering
         - Static Site Rendering
+
+8. How to create scrollable element in Tailwind without a scrollbar:
+        https://www.npmjs.com/package/tailwind-scrollbar-hide
+                npm install tailwind-scrollbar-hide
+
