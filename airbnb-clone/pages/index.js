@@ -6,6 +6,9 @@ import Header from '../components/Header';
 // import the Banner compoent
 import Banner from '../components/banner';
 
+// import the Main component
+import Main from '../components/main';
+
 export default function Home() {
   return (
     <div className="">
@@ -22,7 +25,9 @@ export default function Home() {
       
       {/* Banner */}
       < Banner />
-      {/* */}
+      
+      {/* Main */}
+      <Main />
 
     </div>
   )
