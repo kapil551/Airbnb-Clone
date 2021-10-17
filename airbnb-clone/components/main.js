@@ -3,10 +3,13 @@
 // import the SmallCar component
 import SmallCard from "./smallCard";
 
+// import the MediumCard component
+import MediumCard from "./mediumCard";
+
 // _rfce ==> react functional export component
      
-        // using destructing in JavaScript to access the props.fetchedData
-function Main({ fetchedData }) {
+        // using destructing in JavaScript to access the props.fetchedData and props.fetchedDataForMediumCard
+function Main({ fetchedData, fetchedDataForMediumCard }) {
     return (
 
         /* Styling using Tailwind CSS */
@@ -105,6 +108,14 @@ function Main({ fetchedData }) {
 
                 {/* Styling Using Tailwind CSS */}
                 <h2 className="text-4xl font-semibold py-8"> Live Anywhere </h2>
+
+                {/* Acess the fetchedDataForMediumCard */}
+                {
+                    fetchedDataForMediumCard?.map((item) => {
+
+                        return <MediumCard />
+                    })
+                }
 
             </section>
 
