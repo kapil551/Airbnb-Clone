@@ -89,6 +89,24 @@ function Banner() {
                 */}
                 <p className="text-sm sm:text-lg"> Not sure where to go? Perfect. </p>
 
+                {/* button over the image */}
+                {/* Tailwind CSS:
+                    
+                    class ==> properties
+                */}
+                {/* 
+                    Adding hover effect to the button:
+                        
+                        hover:shadow-xl ==> when i hover on the button, then change the size of its shadow.
+                        active:scale-90 ==> when i click on the button, then scale it to 90%
+
+                        transition duration-150 ==> add transition with duration of 150ms
+                */}
+                <button className="text-purple-500 bg-white px-10 py-4 rounded-full 
+                shadow-md font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150"> 
+                    I'm Flexible 
+                </button>
+
             </div>
            
 
