@@ -113,7 +113,7 @@ function Main({ fetchedData, fetchedDataForMediumCard }) {
                 {
                     fetchedDataForMediumCard?.map((item) => {
 
-                        return <MediumCard />
+                        return <MediumCard key={item.img} img={item.img} title={item.title} />
                     })
                 }
 
