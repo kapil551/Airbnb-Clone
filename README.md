@@ -38,3 +38,6 @@ How Pull some information from the server - API Endpoints?
         
     - Server Side Rendering
     - Static Site Rendering
+
+Rendering in NextJS:
+![](renderingInNextJS.png)
