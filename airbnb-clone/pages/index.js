@@ -9,8 +9,9 @@ import Banner from '../components/banner';
 // import the Main component
 import Main from '../components/main';
 
-            // using destructing in JavaScript to access the props.dataFetchedFromServer
-export default function Home({ dataFetchedFromServer }) {
+            // using destructing in JavaScript to access the props.dataFetchedFromServer 
+            // and props.fetchDataFromServerForMediumCardComponent
+export default function Home({ dataFetchedFromServer, fetchDataFromServerForMediumCardComponent }) {
   return (
     <div className="">
 
@@ -30,7 +31,8 @@ export default function Home({ dataFetchedFromServer }) {
       {/* Main */}
         
       {/* pass on the dataFetchedFromServer containing the data fetched from the server to the Main component*/}
-      <Main fetchedData = {dataFetchedFromServer} />
+      {/* pass on the fetchDataFromServerForMediumCardComponent containing the data fetched from the server to the Main component*/}
+      <Main fetchedData = {dataFetchedFromServer} fetchedDataForMediumCard = {fetchDataFromServerForMediumCardComponent} />
 
     </div>
   )
@@ -55,10 +57,27 @@ export async function getStaticProps() {
   
   // console.log(dataFetchedFromServer);
 
+  // async fetch call to another API-endpoint
+  const fetchDataFromServerForMediumCardComponent = await fetch("https://links.papareact.com/zp1")
+    .then(
+      (response) => {
+        // pull the json inoformation from the response
+        return response.json();
+      }
+    )
+    .catch(
+      (error) => {
+        return null;
+      }
+    )
+
+  // console.log(fetchDataFromServerForMediumCardComponent);
+
   // Step-2: pass on this fetched data to the NextJS App component
   return {
     props: {
       dataFetchedFromServer,
+      fetchDataFromServerForMediumCardComponent
     },
   };
 
