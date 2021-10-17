@@ -103,6 +103,9 @@ function Main({ fetchedData }) {
             {/* middle section of the main component */}
             <section>
 
+                {/* Styling Using Tailwind CSS */}
+                <h2 className="text-4xl font-semibold py-8"> Live Anywhere </h2>
+
             </section>
 
             {/* bottom section of the main component */}
