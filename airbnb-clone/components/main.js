@@ -54,24 +54,49 @@ function Main({ fetchedData }) {
                 {/* for the small cards, we are using the "Static Site Rendering" */}
 
                 {/* Access the data fetched from the server */}
-                {
-                    fetchedData?.map((item) => {
 
-                        // return the SmallCard component for each information item of the fetched data.
+                {/* 
+                    prepare a grid of small card components using CSS grid property (Very Important) 
+
+                        grid ==> display: grid;
+
+                        1. mobile view ==> 
+                            I want the grid to have only one column for mobile ==> grid-cols-1
                         
-                        // console.log(item);
-                        /*
-                            {
-                                img: 'https://links.papareact.com/5j2',
-                                location: 'London',
-                                distance: '45-minute drive'
-                            }
-                        */
+                        2. small window (width >= 640px ) ==> 
+                            I want the grid to have only two columns for small window ==> grid-cols-2
+
+                        3. large window (width >= 1024px ) ==>
+                            I want the grid to have only three columns for large window ==> grid-cols-3
+
+                        4. extra large window (width >= 1280px) ==>
+                            I want the grid to have only four columns for extra large window ==> grid-cols-4
                         
-                        /* Pass on the img, location, and distance of each item to the SmallCard component using props*/
-                        return <SmallCard key={item.img} img={item.img} location={item.location} distance={item.distance}/>
-                    })
-                }
+
+                */}
+                <div className="border-2 border-green-900 grid grid-cols-1 sm:grid-cols-2 
+                        lg:grid-cols-3 xl:grid-cols-4">
+
+                    {
+                        fetchedData?.map((item) => {
+
+                            // return the SmallCard component for each information item of the fetched data.
+                            
+                            // console.log(item);
+                            /*
+                                {
+                                    img: 'https://links.papareact.com/5j2',
+                                    location: 'London',
+                                    distance: '45-minute drive'
+                                }
+                            */
+                            
+                            /* Pass on the img, location, and distance of each item to the SmallCard component using props*/
+                            return <SmallCard key={item.img} img={item.img} location={item.location} distance={item.distance}/>
+                        })
+                    }
+
+                </div>
 
             </section>
 
