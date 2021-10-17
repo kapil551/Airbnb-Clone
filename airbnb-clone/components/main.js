@@ -6,6 +6,9 @@ import SmallCard from "./smallCard";
 // import the MediumCard component
 import MediumCard from "./mediumCard";
 
+// import the LargeCard component
+import LargeCard from "./largeCard";
+
 // _rfce ==> react functional export component
      
         // using destructing in JavaScript to access the props.fetchedData and props.fetchedDataForMediumCard
@@ -140,6 +143,8 @@ function Main({ fetchedData, fetchedDataForMediumCard }) {
 
             {/* bottom section of the main component */}
             <section>
+                
+                <LargeCard />
 
             </section>
 
