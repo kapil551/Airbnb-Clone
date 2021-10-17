@@ -1,5 +1,8 @@
 // Main component
 
+// import the SmallCar component
+import SmallCard from "./smallCard";
+
 // _rfce ==> react functional export component
      
         // using destructing in JavaScript to access the props.fetchedData
@@ -52,9 +55,10 @@ function Main({ fetchedData }) {
 
                 {/* Checking If the data has been fetched successfully from the server or not? */}
                 {
-                    fetchedData.map((item) => {
+                    fetchedData?.map((item) => {
 
-                        return <h1>{item.location}</h1>
+                        // return the SmallCard component for each information item of the fetched data.
+                        return <SmallCard />
                     })
                 }
 
