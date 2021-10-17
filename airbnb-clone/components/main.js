@@ -142,11 +142,12 @@ function Main({ fetchedData, fetchedDataForMediumCard }) {
             </section>
 
             {/* bottom section of the main component */}
-            <section>
-                
-                <LargeCard />
-
-            </section>
+            <LargeCard 
+                img="https://links.papareact.com/4cj"
+                title="The Greatest Outdoors"
+                description="Wishlists curated by Airbnb."
+                buttonText="Get Inspired"
+            />
 
         </main>
     )
