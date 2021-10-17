@@ -1,8 +1,9 @@
 // Main component
 
 // _rfce ==> react functional export component
-
-function Main() {
+     
+        // using destructing in JavaScript to access the props.fetchedData
+function Main({ fetchedData }) {
     return (
 
         /* Styling using Tailwind CSS */
@@ -46,7 +47,17 @@ function Main() {
                         - Every Request that comes in, it will regenerate the page.
 
                 */}
+
                 {/* for the small cards, we are using the "Static Site Rendering" */}
+
+                {/* Checking If the data has been fetched successfully from the server or not? */}
+                {
+                    fetchedData.map((item) => {
+
+                        return <h1>{item.location}</h1>
+                    })
+                }
+
             </section>
 
             {/* middle section of the main component */}
