@@ -53,12 +53,23 @@ function Main({ fetchedData }) {
 
                 {/* for the small cards, we are using the "Static Site Rendering" */}
 
-                {/* Checking If the data has been fetched successfully from the server or not? */}
+                {/* Access the data fetched from the server */}
                 {
                     fetchedData?.map((item) => {
 
                         // return the SmallCard component for each information item of the fetched data.
-                        return <SmallCard />
+                        
+                        // console.log(item);
+                        /*
+                            {
+                                img: 'https://links.papareact.com/5j2',
+                                location: 'London',
+                                distance: '45-minute drive'
+                            }
+                        */
+                        
+                        /* Pass on the img, location, and distance of each item to the SmallCard component using props*/
+                        return <SmallCard key={item.img} img={item.img} location={item.location} distance={item.distance}/>
                     })
                 }
 
