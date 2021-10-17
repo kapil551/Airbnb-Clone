@@ -33,3 +33,8 @@ Why use Tailwind CSS over "Normal CSS"?
     3. It has a highly customizable config file.
     4. Responsive breakpoints for different screen sizes.
     5. Tailwind CSS plugins are a breeze to install and use.
+
+How Pull some information from the server - API Endpoints?
+        
+    - Server Side Rendering
+    - Static Site Rendering

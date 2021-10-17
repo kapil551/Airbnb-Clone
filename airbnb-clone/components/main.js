@@ -23,6 +23,30 @@ function Main() {
                {/* Styling using Tailwind CSS */}
               <h2 className="text-4xl font-semibold pb-5"> Explore Nearby </h2>  
 
+              {/* small cards of the upper section */}
+                {/* 
+                    Pull some data from a server - API endpoints
+
+                    There are two types of Rendering to pull some data from a server using API enpoints:
+                        1. Static Site Rendering 
+                        2. Server Side Rendering
+                    
+                    1. Static Site Rendering:
+
+                        - We use "Static Site Rendering", when the data pulled from the server is not likely to change so much.
+
+                        - In static rendering it prepares the page only once, it caches it on a server and on every request that comes in
+                          it just delievers that same copy to the page.
+
+                    2. Server Side Rendering:
+
+                        - We use "Server Side Rendering", when the information pulled from the server is likely to change a bunch of times
+                          or update on every refresh of the page.
+                        
+                        - Every Request that comes in, it will regenerate the page.
+
+                */}
+                {/* for the small cards, we are using the "Static Site Rendering" */}
             </section>
 
             {/* middle section of the main component */}

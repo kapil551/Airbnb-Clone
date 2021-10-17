@@ -19,3 +19,7 @@
     https://github.com/tailwindlabs/heroicons
 
     npm install @heroicons/react
+
+7. Pull some information from the server:
+        - Server Side Rendering
+        - Static Site Rendering
