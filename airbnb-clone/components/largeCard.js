@@ -9,7 +9,7 @@ import Image from 'next/image';
 function LargeCard({ img, title, description, buttonText }) {
     return (
 
-        <section className=" border-2 border-red-600 relative py-16 cursor-pointer">
+        <section className="relative py-16">
             
             {/* Image */}
             <div className="relative h-96 min-w-[300px]">
@@ -18,7 +18,7 @@ function LargeCard({ img, title, description, buttonText }) {
                     src={img} 
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-2xl"
+                    className="rounded-2xl cursor-pointer"
                 />
 
             </div>
@@ -31,7 +31,7 @@ function LargeCard({ img, title, description, buttonText }) {
                 
                 <p> {description} </p>
                 
-                <button className="text-sm text-white bg-gray-900 px-4 py-2 rounded-lg mt-5"> {buttonText} </button>
+                <button className="text-sm text-white bg-gray-900 px-4 py-2 rounded-lg mt-5 cursor-pointer"> {buttonText} </button>
 
             </div>
 

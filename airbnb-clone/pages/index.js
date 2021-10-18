@@ -35,7 +35,7 @@ export default function Home({ dataFetchedFromServer, fetchDataFromServerForMedi
         
       {/* pass on the dataFetchedFromServer containing the data fetched from the server to the Main component*/}
       {/* pass on the fetchDataFromServerForMediumCardComponent containing the data fetched from the server to the Main component*/}
-      <Main fetchedData = {dataFetchedFromServer} fetchedDataForMediumCard = {fetchDataFromServerForMediumCardComponent} />
+      <Main fetchedData={dataFetchedFromServer} fetchedDataForMediumCard={fetchDataFromServerForMediumCardComponent} />
 
       {/* Footer */}
       <Footer />

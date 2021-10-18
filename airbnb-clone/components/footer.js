@@ -20,9 +20,9 @@ function Footer() {
                     row-gap (grid-row-gap):
                         https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap
                     grid ki row mein gap kar do 10 ka.
-                             
+
         */
-        <div className="border-2 border-gray-800 grid grid-cols-1 md:grid-cols-4 
+        <div className="grid grid-cols-1 md:grid-cols-4 
                 gap-y-10 px-32 py-14 bg-gray-100 text-gray-600">
 
             {/* ABOUT div */}

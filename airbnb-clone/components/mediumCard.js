@@ -18,7 +18,7 @@ function MediumCard({ img, title }) {
                 4. add some easing transition effect ==> ease-out
 
         */
-        <div className="border-2 border-purple-900 cursor-pointer hover:scale-105 
+        <div className="cursor-pointer hover:scale-105 
                 transition transform duration-300 ease-out">
 
             {/* Top portion of a medium card */}

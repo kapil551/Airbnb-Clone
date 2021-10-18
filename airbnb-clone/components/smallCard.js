@@ -22,7 +22,7 @@ function SmallCard( { img, location, distance }) {
                 4. add some easing transition effect ==> ease-out
 
         */
-        <div className="border-2 border-red-900 flex items-center m-2 mt-5 space-x-4 rounded-xl cursor-pointer 
+        <div className="flex items-center m-2 mt-5 space-x-4 rounded-xl cursor-pointer 
                 hover:bg-gray-100 hover:scale-105 transition transform duration-200 ease-out">
 
             {/* <h2> {img} </h2>

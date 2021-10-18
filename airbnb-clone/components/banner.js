@@ -80,7 +80,7 @@ function Banner() {
                 text-center ==> text-align: center;
 
             */}
-            <div className=" border-2 absolute top-1/2 w-full text-center">
+            <div className="absolute top-1/2 w-full text-center">
                 
                 {/* 
                     Adding responsive behaviour to the text of the paragraph:
@@ -108,10 +108,7 @@ function Banner() {
                 </button>
 
             </div>
-           
-
-
-
+            
         </div>
     )
 }
