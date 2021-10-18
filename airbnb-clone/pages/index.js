@@ -9,6 +9,9 @@ import Banner from '../components/banner';
 // import the Main component
 import Main from '../components/main';
 
+// import the Footer component
+import Footer from '../components/footer';
+
             // using destructing in JavaScript to access the props.dataFetchedFromServer 
             // and props.fetchDataFromServerForMediumCardComponent
 export default function Home({ dataFetchedFromServer, fetchDataFromServerForMediumCardComponent }) {
@@ -33,6 +36,9 @@ export default function Home({ dataFetchedFromServer, fetchDataFromServerForMedi
       {/* pass on the dataFetchedFromServer containing the data fetched from the server to the Main component*/}
       {/* pass on the fetchDataFromServerForMediumCardComponent containing the data fetched from the server to the Main component*/}
       <Main fetchedData = {dataFetchedFromServer} fetchedDataForMediumCard = {fetchDataFromServerForMediumCardComponent} />
+
+      {/* Footer */}
+      <Footer />
 
     </div>
   )
