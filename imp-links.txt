@@ -35,3 +35,6 @@
         react-date-range:
                 https://www.npmjs.com/package/react-date-range
 
+11. Adding redirect functionality using useRouter hook:
+        https://nextjs.org/docs/api-reference/next/router
+

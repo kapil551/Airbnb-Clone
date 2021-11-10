@@ -15,6 +15,9 @@ import {
 // import useState
 import { useState } from 'react';
 
+// import useRouter
+import { useRouter } from 'next/router';
+
 // import for react-date-range
 // https://www.npmjs.com/package/react-date-range
 import 'react-date-range/dist/styles.css'; // main style file
@@ -71,6 +74,10 @@ function Header() {
               // the calender hides again.
               setSearchInput("");
       }
+
+      // adding redirection functionnality using useRouter hook
+      const router = useRouter();
+      // now what i want is that when the use clicks on the airbnb logo image then it should redirect to the '/' page.
 
     return (
 
@@ -166,6 +173,10 @@ function Header() {
                     layout="fill"
                     objectFit="contain"
                     objectPosition="left"
+                    // now what i want is that when the use clicks on the airbnb logo image then it should redirect to the '/' page.
+                    onClick={() => {
+                            router.push('/');
+                    }}
                 />
 
             </div>
