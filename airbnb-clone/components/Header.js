@@ -39,6 +39,10 @@ function Header() {
        // useState --> to maintain the value of endDate
        const [endDate, setEndDate] = useState(new Date());
 
+       // useState --> to maintain the number of guests
+       // minimum number of guests are initially one
+       const [noOfGuests, setNoOfGuests] = useState(1);
+
        // selectionRange object variable for DateRangePicker component
        const selectionRange = {
                
@@ -322,7 +326,20 @@ function Header() {
                             <div className="flex items-center border-b mb-4">
                                     <h2 className="text-2xl flex-grow font-semibold"> Number of Guests </h2>
                                     <UsersIcon className="h-5" />
-                                    <input type="number" className="w-12 pl-2 outline-none text-red-400" />
+                                    <input
+                                        type="number" 
+                                        className="w-12 pl-2 outline-none text-red-400"
+                                        // connect the useState noOfGuests to the value of the input tag
+                                        value={ noOfGuests }
+                                        min={1}
+                                        // add a event called onChange to update/set the value of useState noOfGuests variable as the 
+                                        // value of the input tag is changed while typing.
+                                        onChange={(event) => {
+                                                // console.log(event.target.value);
+                                                setNoOfGuests( event.target.value );
+                                        }}
+
+                                    />
                             </div>
                     </div>
             )}
