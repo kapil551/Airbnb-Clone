@@ -266,6 +266,14 @@ function Header() {
                     </div>
             </div>
 
+            {/* Adding the calendar on to the Header component */}
+            {/*
+                I want to show the calendar on to the Header component only when the user starts typing in the
+                search input bar
+                i.e. only show the calendar when the searchInput useState variable has a non-empty string value.
+            */}
+            { searchInput !== "" && <h1>Hello I am a calendar</h1> }
+
         </header>
     )
 }
