@@ -64,6 +64,14 @@ function Header() {
         setEndDate(ranges.selection.endDate);
       }
 
+      // function to handle the onClick event on cancel button
+      const resetInput = () => {
+              // when the user clicks on the cancel button 
+              // I want to update/set the value of searchInput variable to an empty string/ initial state so that
+              // the calender hides again.
+              setSearchInput("");
+      }
+
     return (
 
             /*
@@ -340,6 +348,12 @@ function Header() {
                                         }}
 
                                     />
+                            </div>
+
+                            {/* adding the cancel and search buttons */}
+                            <div className="border-2 border-red-900 flex">
+                                    <button className="flex-grow text-gray-500" onClick={resetInput}> Cancel </button>
+                                    <button className="flex-grow text-red-400"> Search </button>
                             </div>
                     </div>
             )}
