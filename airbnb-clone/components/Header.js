@@ -15,6 +15,12 @@ import {
 // import useState
 import { useState } from 'react';
 
+// import for react-date-range
+// https://www.npmjs.com/package/react-date-range
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { DateRangePicker } from 'react-date-range';
+
 // react functional export component
 
 function Header() {
@@ -27,6 +33,32 @@ function Header() {
                 initially searchInput is a empty string
         */
        const [searchInput, setSearchInput] = useState("");
+
+       // useState --> to maintain the value of startDate
+       const [startDate, setStartDate] = useState(new Date());
+       // useState --> to maintain the value of endDate
+       const [endDate, setEndDate] = useState(new Date());
+
+       // selectionRange object variable for DateRangePicker component
+       const selectionRange = {
+               
+        startDate: startDate,
+        endDate: endDate,
+        key: 'selection',
+
+      }
+
+      // function to handle the onChange selection/updation of startDate and endDate
+      const handleSelect = (ranges) => {
+
+        console.log(ranges);
+
+        // update the value of startDate variable
+        setStartDate(ranges.selection.startDate);
+
+        // update the value of endDate variable
+        setEndDate(ranges.selection.endDate);
+      }
 
     return (
 
@@ -271,8 +303,21 @@ function Header() {
                 I want to show the calendar on to the Header component only when the user starts typing in the
                 search input bar
                 i.e. only show the calendar when the searchInput useState variable has a non-empty string value.
+
+                react-date-range:
+                        https://www.npmjs.com/package/react-date-range
             */}
-            { searchInput !== "" && <h1>Hello I am a calendar</h1> }
+            { searchInput !== "" && (
+                    <div>
+                            {/* render the DateRangePicker component */}
+                            <DateRangePicker
+                                ranges={[selectionRange]} 
+                                minDate={new Date()}
+                                rangeColors={["#FD5B61"]}
+                                onChange={handleSelect}
+                            />
+                    </div>
+            )}
 
         </header>
     )

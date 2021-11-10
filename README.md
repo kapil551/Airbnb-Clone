@@ -41,3 +41,9 @@ How Pull some information from the server - API Endpoints?
 
 Rendering in NextJS:
 ![](renderingInNextJS.png)
+
+Building the calendar on to the header component:
+
+        - react-date-range:
+        
+                https://www.npmjs.com/package/react-date-range

@@ -31,3 +31,7 @@
 9. How to create my own API endpoints:
         Google Search
 
+10. Building the calendar on to the header component:
+        react-date-range:
+                https://www.npmjs.com/package/react-date-range
+
