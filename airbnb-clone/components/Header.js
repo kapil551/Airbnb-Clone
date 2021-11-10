@@ -12,9 +12,22 @@ import {
         UsersIcon
 } from '@heroicons/react/solid';
 
+// import useState
+import { useState } from 'react';
+
 // react functional export component
 
 function Header() {
+        
+        // useState --> To maintain the state of search input
+        /*
+                I want the calendar to show when the user starts typing in the search bar or search input tag
+                For this, I need to maintain the state of search input using useState.
+
+                initially searchInput is a empty string
+        */
+       const [searchInput, setSearchInput] = useState("");
+
     return (
 
             /*
@@ -126,6 +139,14 @@ function Header() {
                 <input className="pl-5 bg-transparent outline-none flex-grow text-sm text-gray-600 placeholder-gray-400" 
                         type="text" 
                         placeholder="Start your search.."
+                        // connect the useState searchInput to the value of the input tag
+                        value={ searchInput }
+                        // add a event called onChange to update/set the value of useState searchInput variable as the 
+                        // value of the input tag is changed while typing.
+                        onChange={(event) => {
+                                // console.log(event.target.value);
+                                setSearchInput( event.target.value );
+                        }}
                 />
 
                 {/* use the SearchIcon from heroicons */}

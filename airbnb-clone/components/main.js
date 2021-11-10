@@ -24,7 +24,7 @@ function Main({ fetchedData, fetchedDataForMediumCard }) {
                 ==> I want the paddiing-left and padding-right to be 2rem by default ==> px-8
                 ==> But when the width >= 640px increase the padding-left and padding-right to 4rem ==> sm:px-16
         */
-        <main className="max-w-7xl mx-auto px-8 sm:px-16">
+        <main className="max-w-7xl mx-auto px-8 sm:px-16 my-12 rounded-2xl bg-white shadow-md">
 
             {/* upper section of the main component */}
              {/* Styling using Tailwind CSS */}

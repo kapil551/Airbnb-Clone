@@ -28,3 +28,6 @@
         https://www.npmjs.com/package/tailwind-scrollbar-hide
                 npm install tailwind-scrollbar-hide
 
+9. How to create my own API endpoints:
+        Google Search
+
