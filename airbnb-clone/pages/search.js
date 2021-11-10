@@ -7,7 +7,30 @@ import Header from "../components/Header";
 // import the Footer component
 import Footer from '../components/footer';
 
+// import useRouter
+import { useRouter } from "next/router";
+
+// import format
+import { format } from "date-fns";
+
 function Search() {
+
+    const router = useRouter();
+
+    // Now I want to access the query parameters passed on in the url
+    // console.log(router.query);
+
+    // do destructuring to get values of query parameters from router object
+    const { location, startDate, endDate, noOfGuests } = router.query;
+
+    const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
+    console.log(formattedStartDate);
+
+    const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
+    console.log(formattedEndDate);
+
+    const range = `${formattedStartDate} - ${formattedEndDate}`;
+
     return (
         <div className="h-screen">
 
@@ -19,9 +42,9 @@ function Search() {
 
                <section className="flex-grow pt-14 px-6">
 
-                   <p className="text-xs" > 300+ stays for 5 number of guests </p>
+                   <p className="text-xs" > 300+ Stays - {range} - for {noOfGuests} guests </p>
 
-                   <h1 className="text-3xl font-semibold mt-2 mb-6" > Stays in Mars </h1>
+                   <h1 className="text-3xl font-semibold mt-2 mb-6" > Stays in {location} </h1>
 
                    {/* Filter buttons */}
                    {/*

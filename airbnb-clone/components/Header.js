@@ -79,6 +79,22 @@ function Header() {
       const router = useRouter();
       // now what i want is that when the use clicks on the airbnb logo image then it should redirect to the '/' page.
 
+      // what I want is that when the user clicks on the search button then it should redirect to the '/search' page
+      // Also I want the vlaues of variables startDate, endDate and noOfGuests to go to the search page dynamically using query parameters
+      const searchRedirect = () => {
+
+        router.push({
+                pathname: '/search',
+                // passing on the dynamic information in url using query parameters
+                query: {
+                        location: searchInput,
+                        startDate: startDate.toISOString(),
+                        endDate: endDate.toISOString(),
+                        noOfGuests: noOfGuests
+                }
+        });
+      }
+
     return (
 
             /*
@@ -364,7 +380,12 @@ function Header() {
                             {/* adding the cancel and search buttons */}
                             <div className="border-2 border-red-900 flex">
                                     <button className="flex-grow text-gray-500" onClick={resetInput}> Cancel </button>
-                                    <button className="flex-grow text-red-400"> Search </button>
+                                    <button 
+                                        className="flex-grow text-red-400"
+                                        // what I want is that when the user clicks on the search button then it should redirect to the '/search' page
+                                        // Also I want the vlaues of variables startDate, endDate and noOfGuests to go to the search page dynamically using query parameters
+                                        onClick={searchRedirect}
+                                     > Search </button>
                             </div>
                     </div>
             )}
