@@ -25,8 +25,9 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
 
 // react functional export component
-
-function Header() {
+        
+        // using destructing to access props.dynamicPlaceholder
+function Header({ dynamicPlaceholder }) {
         
         // useState --> To maintain the state of search input
         /*
@@ -208,8 +209,9 @@ function Header() {
             <div className="border-white-900 flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
 
                 <input className="pl-5 bg-transparent outline-none flex-grow text-sm text-gray-600 placeholder-gray-400" 
-                        type="text" 
-                        placeholder="Start your search.."
+                        type="text"
+                        // now if there is a dynamicPlaceholder prop then show it , otherwise show "Start your search.."
+                        placeholder={dynamicPlaceholder || "Start your search.." }
                         // connect the useState searchInput to the value of the input tag
                         value={ searchInput }
                         // add a event called onChange to update/set the value of useState searchInput variable as the 

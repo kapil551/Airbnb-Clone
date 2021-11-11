@@ -35,7 +35,8 @@ function Search() {
         <div className="h-screen">
 
             {/* Header ==> Use the Header component */}
-           <Header />
+            {/* pass the dynamic information to the header component using props */}
+           <Header dynamicPlaceholder={`${location} | ${range} | ${noOfGuests} guests`} />
 
            {/* main section of the search page */}
            <main className="flex">
