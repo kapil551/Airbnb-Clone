@@ -12,8 +12,13 @@ import { useRouter } from "next/router";
 
 // import format
 import { format } from "date-fns";
+// import InfoCard component
+import InfoCard from "../components/infoCard";
 
-function Search() {
+    // accessing server side props using destructuring
+function Search({ searchResultsResponseJSON }) {
+
+    console.log(searchResultsResponseJSON);
 
     const router = useRouter();
 
@@ -101,6 +106,28 @@ function Search() {
 
                     </div>
 
+                    {/* show the search results */}
+                    <div className="border-2 border-black flex flex-col">
+                        {
+                            searchResultsResponseJSON.map(({ img, location, title, description, star, price, total }) => {
+
+                                return (
+                                    <InfoCard
+                                    key={img} // unique identifier key
+                                    img={img}
+                                    location={location}
+                                    title={title} 
+                                    description={description}
+                                    star={star}
+                                    price={price}
+                                    total={total}
+
+                                    />
+                                )
+                            })
+                        }
+                    </div>
+
                </section>
 
                
@@ -117,3 +144,24 @@ function Search() {
 export default Search;
 
 // now go to http://localhost:3000/search
+
+// Server Side Rendering in next.js
+export async function getServerSideProps() {
+
+    const searchResultsResponseJSON = await fetch("https://links.papareact.com/isz").then((response) => {
+        return response.json();
+    }).catch((err) => {
+        console.log(err);
+    });
+
+    // console.log(searchResultsResponseJSON);
+
+    return {
+        props: {
+            searchResultsResponseJSON
+        }
+    }
+
+
+
+}
