@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 import { format } from "date-fns";
 // import InfoCard component
 import InfoCard from "../components/infoCard";
+import MapBox from "../components/mapBox";
 
     // accessing server side props using destructuring
 function Search({ searchResultsResponseJSON }) {
@@ -44,9 +45,9 @@ function Search({ searchResultsResponseJSON }) {
            <Header dynamicPlaceholder={`${location} | ${range} | ${noOfGuests} guests`} />
 
            {/* main section of the search page */}
-           <main className="flex max-w-screen-xl m-auto">
+           <main className="flex">
 
-               <section className="flex-grow pt-14 px-6">
+               <section className="flex-grow pt-14 px-6 border-2">
 
                    <div className="px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-200 
                             transition transform duration-100 ease-out inline-block">
@@ -133,7 +134,10 @@ function Search({ searchResultsResponseJSON }) {
 
                </section>
 
-               
+               {/* mapbox section */}
+               <section className="border-2 border-green-600 hidden xl:inline-flex xl:min-w-[38rem]">
+                   <MapBox searchResults ={searchResultsResponseJSON} />
+               </section>
 
            </main>
 

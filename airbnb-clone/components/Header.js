@@ -300,7 +300,7 @@ function Header({ dynamicPlaceholder }) {
                 }
 
             */}
-            <div className="flex items-center justify-end space-x-4 text-gray-500">
+            <div className="flex items-center justify-end space-x-4 text-gray-500 ml-2">
 
                     {/* 
                         Adding Responsive behavior to the paragraph:
