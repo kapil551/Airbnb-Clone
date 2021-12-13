@@ -1,0 +1,14 @@
+/* creating custom classes in tailwind css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* apply styling to the base level */
+@layer base {
+    /* body is present at the base level */
+    /* apply the google fonts to the body */
+    body {
+      @apply scrollbar-hide;
+    }
+  }
+  
