@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // https://github.com/visgl/react-map-gl
-import ReactMapGL, { Marker } from 'react-map-gl';
+import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 
 // https://github.com/manuelbieh/geolib#getcentercoords
 import getCenter from 'geolib/es/getCenter';
@@ -70,7 +70,7 @@ function MapBox({ searchResults }) {
                                 className="animate-bounce cursor-pointer text-2xl"
                                 onClick={() => {
                                     // console.log(item.title);
-                                    setCurrCoordinates({ item })
+                                    setCurrCoordinates(item)
                                 }}
                                 role='img'
                                 aria-label='push-pin'
@@ -78,6 +78,24 @@ function MapBox({ searchResults }) {
                                 📌
                             </p>
                             </Marker>
+                              
+                            {/* The popup that should show if the user clicks on a marker */}
+                            {/* https://visgl.github.io/react-map-gl/docs/api-reference/popup */}
+                            {
+                                currCoordinates.long === item.long && 
+                                (
+                                    <Popup
+                                        onClose={() => setCurrCoordinates({})}
+                                        closeOnClick={true}
+                                        latitude={item.lat}
+                                        longitude={item.long}
+                                        
+                                    >
+                                        { item.title }
+                                        {`on click`}
+                                    </Popup>
+                                )
+                            }
                         </div>
                     )
                 })

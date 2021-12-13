@@ -111,7 +111,7 @@ function Search({ searchResultsResponseJSON }) {
                     </div>
 
                     {/* show the search results */}
-                    <div className="border-2 border-black flex flex-col">
+                    <div className="flex flex-col">
                         {
                             searchResultsResponseJSON.map(({ img, location, title, description, star, price, total }) => {
 
