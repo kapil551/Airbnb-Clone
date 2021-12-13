@@ -53,3 +53,10 @@ Technologies Used:
     - Server Side Rendering is basically preparing the information berfore it reaches the user's browser.
 
     - In next.js, there is a middle server which can basically process request so now when the user comes to the website page, i can use the information that we get at url or at some other stuff, to build the page beforehand get all the inoformation and then deliever the entire page to the user wihout the user having to wait for the information to load which would have spoiled the user's experience.
+
+9. Implementing a Loading Bar/Indicator:
+
+    - A loading indicator is essentially when the user transitions to another
+    page, rather than having to user to show nothing, i want a little loading indicator to come on the page during the transition.
+
+    - https://www.npmjs.com/package/@badrap/bar-of-progress
