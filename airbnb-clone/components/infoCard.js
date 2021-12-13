@@ -7,7 +7,7 @@ function InfoCard({ img, location, title, description, star, price, total }) {
     return (
 
         <div className="flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg
-                        transition duration-200 ease-out first:border-t">
+                        transition duration-200 ease-out first:border-t group">
 
             {/* Image div */}
             <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
@@ -15,14 +15,14 @@ function InfoCard({ img, location, title, description, star, price, total }) {
                     src={img}
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-2xl"
+                    className="rounded-2xl group-hover:scale-125 transition duration-200 ease-out"
                 />
             </div>
 
             {/* content div */}
-            <div className="border-2 border-red-500 flex flex-col flex-grow pl-5">
+            <div className="flex flex-col flex-grow pl-5">
 
-                <div className="border-2 border-green-500 flex justify-between">
+                <div className="flex justify-between">
                     <p> {location} </p>
                     <HeartIcon className="h-7 cursor-pointer"/>
                 </div>
@@ -33,8 +33,8 @@ function InfoCard({ img, location, title, description, star, price, total }) {
 
                 <p className="pt-2 text-sm text-gray-500 flex-grow"> {description} </p>
 
-                <div className="border-2 border-yellow-400 flex justify-between items-end pt-5">
-                    <p className="border-2 border-purple-600 flex items-center">
+                <div className="flex justify-between items-end pt-5">
+                    <p className="flex items-center">
                         <StarIcon className="h-5 text-red-400"/>
                         { star }
                     </p>

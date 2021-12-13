@@ -44,13 +44,16 @@ function Search({ searchResultsResponseJSON }) {
            <Header dynamicPlaceholder={`${location} | ${range} | ${noOfGuests} guests`} />
 
            {/* main section of the search page */}
-           <main className="flex">
+           <main className="flex max-w-screen-xl m-auto">
 
                <section className="flex-grow pt-14 px-6">
 
-                   <p className="text-xs" > 300+ Stays - {range} - for {noOfGuests} guests </p>
-
-                   <h1 className="text-3xl font-semibold mt-2 mb-6" > Stays in {location} </h1>
+                   <div className="px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-200 
+                            transition transform duration-100 ease-out inline-block">
+                        <p className="text-xs" > 300+ Stays - <span className="bg-red-400 text-white rounded-xl p-1 mr-1"> {formattedStartDate} </span> - <span className="bg-red-400 text-white rounded-xl p-1 mr-1"> {formattedEndDate} </span> - for <span> {noOfGuests} </span> guests </p>
+                   </div>
+                    
+                    <h1 className="text-3xl font-semibold mt-2 mb-6" > Stays in {location} </h1>
 
                    {/* Filter buttons */}
                    {/*
