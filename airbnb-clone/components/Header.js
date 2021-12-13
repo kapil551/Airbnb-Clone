@@ -380,7 +380,7 @@ function Header({ dynamicPlaceholder }) {
                             </div>
 
                             {/* adding the cancel and search buttons */}
-                            <div className="border-2 border-red-900 flex">
+                            <div className="flex">
                                     <button className="flex-grow text-gray-500" onClick={resetInput}> Cancel </button>
                                     <button 
                                         className="flex-grow text-red-400"

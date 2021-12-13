@@ -20,7 +20,7 @@ export default function Home({ dataFetchedFromServer, fetchDataFromServerForMedi
 
       <Head>
         <title>Airbnb-clone</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/airbnb.ico" />
       </Head>
       
       {/* App Structure */}

@@ -45,7 +45,7 @@ function Search({ searchResultsResponseJSON }) {
            <Header dynamicPlaceholder={`${location} | ${range} | ${noOfGuests} guests`} />
 
            {/* main section of the search page */}
-           <main className="flex">
+           <main className="flex mb-12">
 
                <section className="flex-grow pt-14 px-6 border-2">
 
