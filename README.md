@@ -8,6 +8,15 @@ Technologies Used:
 4. Vercel (Deployment)
 5. mapbox API
 
+0. Project Overview:
+
+    - 
+    -
+    -
+    -
+    -
+    -
+
 1. Choosing NextJS comes with 3 major advantages:
     
     1. Build powerful hybrid apps! (Sever Side Rendering)
@@ -72,5 +81,3 @@ Technologies Used:
 11. geolib:
 
     - https://github.com/manuelbieh/geolib
-
-    - 

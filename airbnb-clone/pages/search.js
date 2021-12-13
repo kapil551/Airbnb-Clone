@@ -135,7 +135,7 @@ function Search({ searchResultsResponseJSON }) {
                </section>
 
                {/* mapbox section */}
-               <section className="border-2 border-green-600 hidden xl:inline-flex xl:min-w-[38rem]">
+               <section className="hidden xl:inline-flex xl:min-w-[38rem]">
                    <MapBox searchResults ={searchResultsResponseJSON} />
                </section>
 
