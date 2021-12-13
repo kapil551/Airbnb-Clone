@@ -10,12 +10,10 @@ Technologies Used:
 
 0. Project Overview:
 
-    - 
-    -
-    -
-    -
-    -
-    -
+    - Fully responsive Airbnb clone with features like date range picker calendar, choosing the number of guests, a separate search results page, and an integrated map with location markers.
+    - Building this clone helped me learn about maintaining states and passing props in react while avoiding the problem of prop drilling.
+    - I also learned about server-side and static-side rendering in next.js which helps in greatly improving the user's experience.
+    - Tools/Technologies - React.js, Next.js, TailwindCSS, MapboxAPI
 
 1. Choosing NextJS comes with 3 major advantages:
     
