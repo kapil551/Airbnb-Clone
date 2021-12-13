@@ -2,6 +2,9 @@ import '../styles/globals.css';
 
 import Router from 'next/router';
 
+// https://visgl.github.io/react-map-gl/docs/get-started/get-started
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 // inplementing loader bar/indicator
 // https://www.npmjs.com/package/@badrap/bar-of-progress
 import ProgressBar from "@badrap/bar-of-progress";
