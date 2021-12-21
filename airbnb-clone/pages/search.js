@@ -19,7 +19,7 @@ import MapBox from "../components/mapBox";
     // accessing server side props using destructuring
 function Search({ searchResultsResponseJSON }) {
 
-    console.log(searchResultsResponseJSON);
+    // console.log(searchResultsResponseJSON);
 
     const router = useRouter();
 
@@ -30,10 +30,10 @@ function Search({ searchResultsResponseJSON }) {
     const { location, startDate, endDate, noOfGuests } = router.query;
 
     const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
-    console.log(formattedStartDate);
+    // console.log(formattedStartDate);
 
     const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
-    console.log(formattedEndDate);
+    // console.log(formattedEndDate);
 
     const range = `${formattedStartDate} - ${formattedEndDate}`;
 

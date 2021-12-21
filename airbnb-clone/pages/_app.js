@@ -32,8 +32,24 @@ Router.events.on("routeChangeStart", progress.start); // Show the progress bar a
 Router.events.on("routeChangeComplete", progress.finish); // End the progress bar animation.
 Router.events.on("routeChangeError", progress.finish); // End the progress bar animation.
 
+// recoil
+import React from 'react';
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
+
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <RecoilRoot>
+      
+      <Component {...pageProps} />
+     
+    </RecoilRoot>
+  )
 }
 
 export default MyApp
